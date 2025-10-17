@@ -40,4 +40,19 @@ function PlayRound(){
     }
 }
 
-PlayRound();
+function PlayGame(){
+    for(let i = 0; i < 5; i++){
+        PlayRound();
+        console.log("Player Score: " + humanscore + " | Computer Score: " + computerscore);
+    }
+
+    if(humanscore > computerscore){
+        console.log("Congratulations! You won the game!");
+    }else if(computerscore > humanscore){
+        console.log("Sorry! The computer won the game!");
+    }else{
+        console.log("It's a tie game!");
+    }
+}
+
+PlayGame();
