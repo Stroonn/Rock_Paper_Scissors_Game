@@ -60,6 +60,9 @@ PlayGame();*/
 let humanscore = 0;
 let computerscore = 0;
 
+document.getElementById("c_score").innerHTML = computerscore;
+document.getElementById("p_score").innerHTML = humanscore;
+
 const myButton = document.getElementById("rock");
 myButton.addEventListener("click", function () {
     var computer = getComputerChoice();
@@ -71,12 +74,28 @@ myButton.addEventListener("click", function () {
         (computer === 'scissors')
     ){
         humanscore++;
+        document.getElementById("p_score").innerHTML = humanscore;
         alert("You win! Rock beats Scissors!");
+        if(humanscore == 5){
+            alert("Congratulations! You reached 5 points and won the game!");
+            humanscore = 0;
+            computerscore = 0;
+            document.getElementById("c_score").innerHTML = computerscore;
+            document.getElementById("p_score").innerHTML = humanscore;
+        }
     }else if(
         (computer === 'paper')
     ){
         alert("You lose! Paper beats Rock!");
         computerscore++;
+        document.getElementById("c_score").innerHTML = computerscore;
+        if(computerscore == 5){
+            alert("The computer reached 5 points and won the game! Better luck next time!");
+            humanscore = 0;
+            computerscore = 0;
+            document.getElementById("c_score").innerHTML = computerscore;
+            document.getElementById("p_score").innerHTML = humanscore;
+        }
     }
 });
 
@@ -90,12 +109,28 @@ myButton1.addEventListener("click", function () {
         (computer === 'rock')
     ){
         humanscore++;
+        document.getElementById("p_score").innerHTML = humanscore;
         alert("You win! Paper beats Rock!");
+        if(humanscore == 5){
+            alert("Congratulations! You reached 5 points and won the game!");
+            humanscore = 0;
+            computerscore = 0;
+            document.getElementById("c_score").innerHTML = computerscore;
+            document.getElementById("p_score").innerHTML = humanscore;
+        }
     }else if(
         (computer === 'scissors')
     ){
         alert("You lose! Scissors beats Paper!");
         computerscore++;
+        document.getElementById("c_score").innerHTML = computerscore;
+        if(computerscore == 5){
+            alert("The computer reached 5 points and won the game! Better luck next time!");
+            humanscore = 0;
+            computerscore = 0;
+            document.getElementById("c_score").innerHTML = computerscore;
+            document.getElementById("p_score").innerHTML = humanscore;
+        }
     }
 });
 
@@ -109,12 +144,28 @@ myButton2.addEventListener("click", function () {
         (computer === 'paper')
     ){
         humanscore++;
+        document.getElementById("p_score").innerHTML = humanscore;
         alert("You win! Scissors beats Paper!");
+        if(humanscore == 5){
+            alert("Congratulations! You reached 5 points and won the game!");
+            humanscore = 0;
+            computerscore = 0;
+            document.getElementById("c_score").innerHTML = computerscore;
+            document.getElementById("p_score").innerHTML = humanscore;
+        }
     }else if(
         (computer === 'rock')
     ){
         alert("You lose! Rock beats Scissors!");
         computerscore++;
+        document.getElementById("c_score").innerHTML = computerscore;
+        if(computerscore == 5){
+            alert("The computer reached 5 points and won the game! Better luck next time!");
+            humanscore = 0;
+            computerscore = 0;
+            document.getElementById("c_score").innerHTML = computerscore;
+            document.getElementById("p_score").innerHTML = humanscore;
+        }
     }
 });
 
